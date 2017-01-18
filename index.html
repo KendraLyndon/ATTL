@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="attl-app">
   <head>
+    <base href='/' />
     <meta charset="utf-8">
     <link rel="stylesheet" href="stylesheets/input.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
     <title>A Time To Live Musical</title>
-    <base href='/' />
   </head>
   <body>
-    <h1>A Time To Live</h1>
-    <section ui-view="projects" class="projects"></section>
-    <section ui-view="skills" class="skills"></section>
-    <section ui-view="about" class="about"></section>
-    <section ui-view="contact" class="contact"></section>
+    <header>
+      <h1>A Time To Live</h1>
+      <nav>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/tickets">Tickets</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main ng-view>
+    </main>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

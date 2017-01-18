@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,CAAE;EACA,WAAW,EAAE,KAAK",
+"mappings": "AAAA,MAAO;EACL,MAAM,EAAE,IAAI;;AAEd,IAAK;EACH,UAAU,EAAE,IAAI",
 "sources": ["input.scss"],
 "names": [],
 "file": "input.css"

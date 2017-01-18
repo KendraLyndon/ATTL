@@ -1,4 +1,7 @@
-* {
-  font-family: serif; }
+header {
+  height: 10vh; }
+
+main {
+  min-height: 90vh; }
 
 /*# sourceMappingURL=input.css.map */
