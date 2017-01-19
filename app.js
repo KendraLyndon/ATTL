@@ -1,16 +1,18 @@
-angular.module('attl-app', ['ngRoute']);
+var app = angular.module('attl-app', ['ngRoute']);
 
-angular.module('attl-app').config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider) {
 
   $routeProvider
     .when('/', {
-      templateUrl: 'partials/home.html'
+      templateUrl: 'partials/home.html',
+      controller: 'controllers/HomeController'
     })
     .when('/about', {
       templateUrl: 'partials/about.html'
     })
     .when('/news', {
-      templateUrl: 'partials/news.html'
+      templateUrl: 'partials/news.html',
+      controller: 'controllers/NewsController'
     })
     .when('/tickets', {
       templateUrl: 'partials/tickets.html'
