@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="attl-app">
+<html ng-app="attlApp">
   <head>
     <base href='/' />
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/input.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
-    <script src="lib/ng-map.min.js"></script>
+    <link rel="stylesheet" href="app/stylesheets/input.css" />
+
     <title>A Time To Live Musical</title>
   </head>
   <body>
@@ -25,6 +23,7 @@
     </header>
     <main ng-view>
     </main>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="js/vendor.bundle.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/app.bundle.js" charset="utf-8"></script>
   </body>
 </html>
