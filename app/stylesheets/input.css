@@ -40,4 +40,8 @@ a {
   color: white;
   font-weight: lighter; }
 
+ng-map {
+  height: 400px;
+  width: 400px; }
+
 /*# sourceMappingURL=input.css.map */

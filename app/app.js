@@ -1,7 +1,8 @@
-var attlApp = angular.module('attlApp', [require('angular-route')]);
+var attlApp = angular.module('attlApp', [require('angular-route'), require('ngmap')]);
 var HomeController = require('./controllers/HomeController');
 
 attlApp.config(function($routeProvider, $locationProvider) {
+
   $routeProvider
     .when('/', {
       templateUrl: 'app/partials/home.html',
@@ -19,7 +20,7 @@ attlApp.config(function($routeProvider, $locationProvider) {
     })
     .when('/contact', {
       templateUrl: 'app/partials/contact.html'
-    })
+    });
 
   $locationProvider.html5Mode(true);
 });

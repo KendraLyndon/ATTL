@@ -49,4 +49,7 @@ a {
   font-weight: lighter;
 }
 
-.angular-google-map-container { height: 400px; }
+ng-map {
+  height: 400px;
+  width: 400px;
+}
