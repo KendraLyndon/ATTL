@@ -1,7 +1,8 @@
 $poster-blue: #4D6C94;
 $poster-blue-light: #5E84B5;
 $poster-blue-dark: #3D5575;
-$poster-purple: #4F383F;
+$poster-purple: #A4717C;
+$poster-purple-dark: #50393F;
 $font-title: 'Libre Baskerville', serif;
 $font-main: 'Open Sans', sans-serif;
 
@@ -13,13 +14,28 @@ $font-main: 'Open Sans', sans-serif;
   border: 0;
 }
 
-.attl-title {
-  font-family: $font-title;
-  margin-left: 10px;
+main {
+  min-height: 90vh;
+  width: 100%;
+  clear: both;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 25px 12.5vw 25px 12.5vw;
+  clear: both;
+}
+
+.title-banner {
+  margin-top: 0;
+  padding: 15px;
+  background-color: $poster-purple;
 }
 
 .attl-poster {
-  height: 70vh;
+  height: 80vh;
+  margin-top: 1.46rem;
   float: right;
 }
 
@@ -35,31 +51,48 @@ $font-main: 'Open Sans', sans-serif;
   background-color: $poster-blue-dark;
 }
 
-main {
-  min-height: 90vh;
-  width: 75vw;
-  margin: 0 auto 0 auto;
-  padding-top: 20px;
-  clear: both;
-}
-
-section {
-  width: 100%;
-  clear: both;
+.detail {
+  font-size: 20px;
 }
 
 // headers
-h2 {
+h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
-h3 {
-  text-align: center;
+.main-title {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.showtimes-tr {
-  height: 1.5em;
+.attl-title {
+  font-family: $font-title;
 }
+
+.attl-logo {
+  margin-left: 10px;
+}
+
+.showtimes-container {
+  margin-bottom: 30px;
+}
+
+.showtimes-table {
+  width: 85%;
+  margin: 0 auto 0 auto;
+}
+
+.showtimes-td {
+  padding: 5px 5px;
+}
+
+.map-container {
+  p {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
 
 a {
   text-decoration: none;
@@ -68,28 +101,27 @@ a {
 }
 
 ng-map {
-  height: 30vh;
-  width: 30vw;
+  width: 100%;
 }
 
-.home-div-left {
-  float: left;
-  width: 50%;
+.home-section-story {
+  background-color: $poster-purple-dark;
+
+  p {
+    font-weight: lighter;
+    text-align: justify;
+    padding: 10px;
+  }
 }
 
-.home-div-right {
-  float: right;
-  width: 50%;
-}
-
-.gallery-icon-box {
+.gallery-thumbnail-box {
   width: 10vw;
   height: 10vw;
   margin: 1%;
   display: inline-block;
 }
 
-.gallery-icon {
+.gallery-thumbnail {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -103,4 +135,9 @@ ng-map {
 
 .gallery-photo {
   width: 100%;
+}
+
+.home-section-actors {
+  background-color: $poster-purple-dark;
+  margin-bottom: 0;
 }

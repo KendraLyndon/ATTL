@@ -5,12 +5,25 @@
   padding: 0;
   border: 0; }
 
-.attl-title {
-  font-family: "Libre Baskerville", serif;
-  margin-left: 10px; }
+main {
+  min-height: 90vh;
+  width: 100%;
+  clear: both; }
+
+section {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 25px 12.5vw 25px 12.5vw;
+  clear: both; }
+
+.title-banner {
+  margin-top: 0;
+  padding: 15px;
+  background-color: #A4717C; }
 
 .attl-poster {
-  height: 70vh;
+  height: 80vh;
+  margin-top: 1.46rem;
   float: right; }
 
 #attl-footer {
@@ -22,25 +35,35 @@
 .attl-blue-dark {
   background-color: #3D5575; }
 
-main {
-  min-height: 90vh;
-  width: 75vw;
-  margin: 0 auto 0 auto;
-  padding-top: 20px;
-  clear: both; }
+.detail {
+  font-size: 20px; }
 
-section {
-  width: 100%;
-  clear: both; }
-
-h2 {
+h1, h2, h3, h4, h5 {
   text-align: center; }
 
-h3 {
-  text-align: center; }
+.main-title {
+  margin-top: 5px;
+  margin-bottom: 5px; }
 
-.showtimes-tr {
-  height: 1.5em; }
+.attl-title {
+  font-family: "Libre Baskerville", serif; }
+
+.attl-logo {
+  margin-left: 10px; }
+
+.showtimes-container {
+  margin-bottom: 30px; }
+
+.showtimes-table {
+  width: 85%;
+  margin: 0 auto 0 auto; }
+
+.showtimes-td {
+  padding: 5px 5px; }
+
+.map-container p {
+  margin-bottom: 10px;
+  text-align: center; }
 
 a {
   text-decoration: none;
@@ -48,24 +71,22 @@ a {
   font-weight: lighter; }
 
 ng-map {
-  height: 30vh;
-  width: 30vw; }
+  width: 100%; }
 
-.home-div-left {
-  float: left;
-  width: 50%; }
+.home-section-story {
+  background-color: #50393F; }
+  .home-section-story p {
+    font-weight: lighter;
+    text-align: justify;
+    padding: 10px; }
 
-.home-div-right {
-  float: right;
-  width: 50%; }
-
-.gallery-icon-box {
+.gallery-thumbnail-box {
   width: 10vw;
   height: 10vw;
   margin: 1%;
   display: inline-block; }
 
-.gallery-icon {
+.gallery-thumbnail {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -77,5 +98,9 @@ ng-map {
 
 .gallery-photo {
   width: 100%; }
+
+.home-section-actors {
+  background-color: #50393F;
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=input.css.map */

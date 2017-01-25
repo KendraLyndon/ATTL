@@ -1,65 +1,70 @@
+<div class="card-panel lighten-2 title-banner">
+  <h1 class="attl-title main-title grey-text text-lighten-4">A Time To Live</h1>
+  <h4 class="attl-title grey-text text-lighten-4">A new musical inspired by a 3000 year old story</h4>
+</div>
 <section class="home-section-details row">
-  <h2>Showtimes</h2>
-  <div class="col s6">
-    <h3>Free Admission</h3>
-    <table class="showtimes-table">
+  <div class="col s12 m7 l7">
+    <div class="showtimes-container">
+      <h3 class="attl-title">Showtimes <span class="detail">(Free Admisison)</span></h3>
+      <table class="showtimes-table">
         <thead>
-          <tr class="showtimes-tr">
-            <th data-field="date">Date</th>
-            <th data-field="day"></th>
-            <th data-field="time">Time</th>
+          <tr>
+            <th class="showtimes-td" data-field="date">Date</th>
+            <th class="showtimes-td" data-field="day"></th>
+            <th class="showtimes-td right" data-field="time">Time</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="showtime in vm.showtimes">
-            <td>{{showtime.date}}</td>
-            <td>{{showtime.day}}</td>
-            <td>{{showtime.time}}</td>
+            <td class="showtimes-td">{{showtime.date}}</td>
+            <td class="showtimes-td">{{showtime.day}}</td>
+            <td class="showtimes-td right">{{showtime.time}}</td>
           </tr>
         </tbody>
       </table>
-      <div class="map-container">
-        <h3>At Newport Covenant Church</h3>
-        <ng-map center="[47.5646, -122.1700]" zoom="16">
-          <marker position="[47.5646, -122.1700]" />
-        </ng-map>
-        <p>
-          12800 SE Coal Creek Pkwy <br /> Bellevue, WA 98006
-        </p>
-      </div>
+    </div>
+    <div class="map-container">
+      <h4 class="attl-title">At Newport Covenant Church</h4>
+      <p>
+        12800 SE Coal Creek Pkwy  Bellevue, WA 98006
+      </p>
+      <ng-map class="z-depth-1" center="[47.5646, -122.1700]" zoom="16">
+        <marker position="[47.5646, -122.1700]" />
+      </ng-map>
+    </div>
   </div>
-  <div class="col s6">
-    <img class="attl-poster" src="app/img/poster-copy.png" alt="poster" />
+  <div class="col s12 m5 l5">
+    <img class="attl-poster z-depth-2" src="app/img/poster-no-copy.png" alt="poster" />
   </div>
 </section>
 
 <section class="home-section-story row">
-  <h2>THE STORY</h2>
-  <p>
+  <h2 class="attl-title grey-text text-lighten-4">The Story</h2>
+  <p class="grey-text text-lighten-4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
   </p>
-  <p>
+  <p class="grey-text text-lighten-4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
 
 </section>
 
 <section class="home-section-gallery gallery">
+  <h2 class="attl-title">Photos</h2>
   <div class="row">
     <div class="gallery-icon-container col s12 m6">
-      <div ng-repeat="photo in vm.photos track by $index" ng-click="changeSelectedPhoto(photo.fullSize)" class="gallery-icon-box">
-        <img class="gallery-icon" ng-src="{{photo.icon}}" alt="gallery-icon"/>
+      <div ng-repeat="photo in vm.photos track by $index" ng-click="changeSelectedPhoto(photo.fullSize)" class="gallery-thumbnail-box">
+        <img class="gallery-thumbnail" ng-src="{{photo.thumbnail}}" alt="gallery-thumbnail"/>
       </div>   <!-- end icon box  -->
     </div>   <!-- end icon container  -->
     <div class="gallery-photo-container col s12 m6">
       <img ng-src="{{selectedPhoto}}" class="gallery-photo" alt="gallery photo"/>
     </div> <!-- end gallery photo container -->
-
-  </div>
+  </div> <!-- end row -->
 </section> <!-- end gallery -->
 
 <section class="home-section-actors row">
-  <h2>Actors</h2>
+  <h2 class="attl-title grey-text text-lighten-4">Actors</h2>
   <div class="row">
     <div ng-repeat="actor in vm.actors track by $index" class="col s12 m4">
       <div  class="card">

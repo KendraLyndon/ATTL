@@ -36,35 +36,35 @@ attlApp.factory('HomeService', function(){
     ],
     photos : [
       {
-        icon: 'app/img/puppy1.jpg',
+        thumbnail: 'app/img/puppy1.jpg',
         fullSize: 'app/img/puppy1.jpg'
       },
       {
-        icon: 'app/img/puppy2.jpg',
+        thumbnail: 'app/img/puppy2.jpg',
         fullSize: 'app/img/puppy2.jpg'
       },
       {
-        icon: 'app/img/puppy3.jpg',
+        thumbnail: 'app/img/puppy3.jpg',
         fullSize: 'app/img/puppy3.jpg'
       },
       {
-        icon: 'app/img/puppy4.jpg',
+        thumbnail: 'app/img/puppy4.jpg',
         fullSize: 'app/img/puppy4.jpg'
       },
       {
-        icon: 'app/img/placeholder.jpg',
+        thumbnail: 'app/img/placeholder.jpg',
         fullSize: 'app/img/placeholder.jpg'
       },
       {
-        icon: 'app/img/puppy3.jpg',
+        thumbnail: 'app/img/puppy3.jpg',
         fullSize: 'app/img/puppy3.jpg'
       },
       {
-        icon: 'app/img/puppy1.jpg',
+        thumbnail: 'app/img/puppy1.jpg',
         fullSize: 'app/img/puppy1.jpg'
       },
       {
-        icon: 'app/img/puppy2.jpg',
+        thumbnail: 'app/img/puppy2.jpg',
         fullSize: 'app/img/puppy2.jpg'
       },
     ]
