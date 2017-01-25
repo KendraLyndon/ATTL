@@ -1,39 +1,46 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: #4A4B4C;
   margin: 0;
   padding: 0;
   border: 0; }
 
-header {
-  background-color: #4D6C94;
-  position: relative; }
+.attl-title {
+  font-family: "Libre Baskerville", serif;
+  margin-left: 10px; }
 
-nav {
-  width: 100%;
-  background-color: #4F383F; }
-  nav ul {
-    width: 98%;
-    margin: 0 auto 0 auto;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; }
+.attl-poster {
+  height: 70vh;
+  float: right; }
 
-li {
-  margin: 5px 0 5px 0; }
+#attl-footer {
+  background-color: #4D6C94; }
 
-h1 {
-  width: 100%;
-  font-family: 'Libre Baskerville', serif;
-  color: white;
-  text-align: center;
-  font-size: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+.attl-blue {
+  background-color: #4D6C94; }
+
+.attl-blue-dark {
+  background-color: #3D5575; }
 
 main {
-  min-height: 90vh; }
+  min-height: 90vh;
+  width: 75vw;
+  margin: 0 auto 0 auto;
+  padding-top: 20px;
+  clear: both; }
+
+section {
+  width: 100%;
+  clear: both; }
+
+h2 {
+  text-align: center; }
+
+h3 {
+  text-align: center; }
+
+.showtimes-tr {
+  height: 1.5em; }
 
 a {
   text-decoration: none;
@@ -41,7 +48,34 @@ a {
   font-weight: lighter; }
 
 ng-map {
-  height: 400px;
-  width: 400px; }
+  height: 30vh;
+  width: 30vw; }
+
+.home-div-left {
+  float: left;
+  width: 50%; }
+
+.home-div-right {
+  float: right;
+  width: 50%; }
+
+.gallery-icon-box {
+  width: 10vw;
+  height: 10vw;
+  margin: 1%;
+  display: inline-block; }
+
+.gallery-icon {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: inline-block;
+  overflow: hidden; }
+
+.gallery-photo-container {
+  width: 44vw; }
+
+.gallery-photo {
+  width: 100%; }
 
 /*# sourceMappingURL=input.css.map */

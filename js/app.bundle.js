@@ -3,6 +3,7 @@ webpackJsonp([0],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var attlApp = angular.module('attlApp', [__webpack_require__(1), __webpack_require__(3)]);
+
 	var HomeController = __webpack_require__(6);
 
 	attlApp.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
@@ -15,8 +16,6 @@ webpackJsonp([0],[
 	    templateUrl: 'app/partials/about.html'
 	  }).when('/news', {
 	    templateUrl: 'app/partials/news.html'
-	  }).when('/tickets', {
-	    templateUrl: 'app/partials/tickets.html'
 	  }).when('/contact', {
 	    templateUrl: 'app/partials/contact.html'
 	  });
@@ -4569,22 +4568,131 @@ webpackJsonp([0],[
 /* 4 */,
 /* 5 */,
 /* 6 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var attlApp = angular.module('attlApp');
+	var HomeService = __webpack_require__(7);
+	var ActorService = __webpack_require__(8);
 
-	attlApp.controller("HomeController", ["$scope", "NgMap", function ($scope, NgMap) {
+	attlApp.controller("HomeController", ["$scope", "NgMap", "HomeService", "ActorService", function ($scope, NgMap, HomeService, ActorService) {
 	  $scope.vm = {};
-	  $scope.vm.greeting = "successfull home controller";
+	  $scope.vm.showtimes = HomeService.showtimes;
+	  $scope.vm.photos = HomeService.photos;
+	  $scope.vm.actors = ActorService.all;
+	  $scope.selectedPhoto = 'app/img/puppy1.jpg';
+
+	  //api key
 	  $scope.googleMapsUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB5uWq_OelNUbXyUKUhr23Tj3enH6tqQfI";
+	  //google map
 	  NgMap.getMap().then(function (map) {
 	    console.log(map.getCenter());
 	    console.log('markers', map.markers);
 	    console.log('shapes', map.shapes);
 	  });
+
+	  $scope.changeSelectedPhoto = function (url) {
+	    $scope.selectedPhoto = url;
+	  };
 	}]);
 
 	module.exports = attlApp;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	var attlApp = angular.module('attlApp');
+
+	attlApp.factory('HomeService', function () {
+	  return {
+	    showtimes: [{
+	      day: 'Friday',
+	      date: 'March 24',
+	      time: '7 pm'
+	    }, {
+	      day: 'Saturday',
+	      date: 'March 25',
+	      time: '7 pm'
+	    }, {
+	      day: 'Sunday',
+	      date: 'March 26',
+	      time: '3 pm'
+	    }, {
+	      day: 'Friday',
+	      date: 'March 31',
+	      time: '7 pm'
+	    }, {
+	      day: 'Saturday',
+	      date: 'April 1',
+	      time: '7 pm'
+	    }, {
+	      day: 'Sunday',
+	      date: 'April 2',
+	      time: '3 pm'
+	    }],
+	    photos: [{
+	      icon: 'app/img/puppy1.jpg',
+	      fullSize: 'app/img/puppy1.jpg'
+	    }, {
+	      icon: 'app/img/puppy2.jpg',
+	      fullSize: 'app/img/puppy2.jpg'
+	    }, {
+	      icon: 'app/img/puppy3.jpg',
+	      fullSize: 'app/img/puppy3.jpg'
+	    }, {
+	      icon: 'app/img/puppy4.jpg',
+	      fullSize: 'app/img/puppy4.jpg'
+	    }, {
+	      icon: 'app/img/placeholder.jpg',
+	      fullSize: 'app/img/placeholder.jpg'
+	    }, {
+	      icon: 'app/img/puppy3.jpg',
+	      fullSize: 'app/img/puppy3.jpg'
+	    }, {
+	      icon: 'app/img/puppy1.jpg',
+	      fullSize: 'app/img/puppy1.jpg'
+	    }, {
+	      icon: 'app/img/puppy2.jpg',
+	      fullSize: 'app/img/puppy2.jpg'
+	    }]
+	  };
+	});
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	var attlApp = angular.module('attlApp');
+
+	attlApp.factory('ActorService', function () {
+	  return {
+	    all: [{
+	      name: "Vanessa O'Francia",
+	      photo: 'app/img/puppy2.jpg',
+	      bio: 'Vanessa Ignacio O’Francia (Milcah) is a Seattle native and a woman after God’s own heart. She is absolutely honored to make her debut here with Newport Covenant Church. You may have seen Vanessa in some of her favorite theatre productions such as The Dream Girls (Lorrell Robinson), The Coming of the Messiah (Mother Mary), and The Snow Queen (Gerda) . As she pursues the arts Vanessa also balances her graduate studies at the UW School of Social Work and service as an Art/Mental Health Therapist. She would like to thank the staff for this wonderful opportunity, the love of her life for all of his support, and God for pushing her to be a “lion-hearted-lamb” Hebrews 10:35-36.'
+	    }, {
+	      name: "Vanessa O'Francia",
+	      photo: 'app/img/puppy2.jpg',
+	      bio: 'Vanessa Ignacio O’Francia (Milcah) is a Seattle native and a woman after God’s own heart. She is absolutely honored to make her debut here with Newport Covenant Church. You may have seen Vanessa in some of her favorite theatre productions such as The Dream Girls (Lorrell Robinson), The Coming of the Messiah (Mother Mary), and The Snow Queen (Gerda) . As she pursues the arts Vanessa also balances her graduate studies at the UW School of Social Work and service as an Art/Mental Health Therapist. She would like to thank the staff for this wonderful opportunity, the love of her life for all of his support, and God for pushing her to be a “lion-hearted-lamb” Hebrews 10:35-36.'
+	    }, {
+	      name: "Vanessa O'Francia",
+	      photo: 'app/img/puppy2.jpg',
+	      bio: 'Vanessa Ignacio O’Francia (Milcah) is a Seattle native and a woman after God’s own heart. She is absolutely honored to make her debut here with Newport Covenant Church. You may have seen Vanessa in some of her favorite theatre productions such as The Dream Girls (Lorrell Robinson), The Coming of the Messiah (Mother Mary), and The Snow Queen (Gerda) . As she pursues the arts Vanessa also balances her graduate studies at the UW School of Social Work and service as an Art/Mental Health Therapist. She would like to thank the staff for this wonderful opportunity, the love of her life for all of his support, and God for pushing her to be a “lion-hearted-lamb” Hebrews 10:35-36.'
+	    }, {
+	      name: "Vanessa O'Francia",
+	      photo: 'app/img/puppy2.jpg',
+	      bio: 'Vanessa Ignacio O’Francia (Milcah) is a Seattle native and a woman after God’s own heart. She is absolutely honored to make her debut here with Newport Covenant Church. You may have seen Vanessa in some of her favorite theatre productions such as The Dream Girls (Lorrell Robinson), The Coming of the Messiah (Mother Mary), and The Snow Queen (Gerda) . As she pursues the arts Vanessa also balances her graduate studies at the UW School of Social Work and service as an Art/Mental Health Therapist. She would like to thank the staff for this wonderful opportunity, the love of her life for all of his support, and God for pushing her to be a “lion-hearted-lamb” Hebrews 10:35-36.'
+	    }, {
+	      name: "Vanessa O'Francia",
+	      photo: 'app/img/puppy2.jpg',
+	      bio: 'Vanessa Ignacio O’Francia (Milcah) is a Seattle native and a woman after God’s own heart. She is absolutely honored to make her debut here with Newport Covenant Church. You may have seen Vanessa in some of her favorite theatre productions such as The Dream Girls (Lorrell Robinson), The Coming of the Messiah (Mother Mary), and The Snow Queen (Gerda) . As she pursues the arts Vanessa also balances her graduate studies at the UW School of Social Work and service as an Art/Mental Health Therapist. She would like to thank the staff for this wonderful opportunity, the love of her life for all of his support, and God for pushing her to be a “lion-hearted-lamb” Hebrews 10:35-36.'
+	    }, {
+	      name: "Vanessa O'Francia",
+	      photo: 'app/img/puppy2.jpg',
+	      bio: 'Vanessa Ignacio O’Francia (Milcah) is a Seattle native and a woman after God’s own heart. She is absolutely honored to make her debut here with Newport Covenant Church. You may have seen Vanessa in some of her favorite theatre productions such as The Dream Girls (Lorrell Robinson), The Coming of the Messiah (Mother Mary), and The Snow Queen (Gerda) . As she pursues the arts Vanessa also balances her graduate studies at the UW School of Social Work and service as an Art/Mental Health Therapist. She would like to thank the staff for this wonderful opportunity, the love of her life for all of his support, and God for pushing her to be a “lion-hearted-lamb” Hebrews 10:35-36.'
+	    }]
+	  };
+	});
 
 /***/ }
 ]);

@@ -1,7 +1,77 @@
-<h2>You are home!</h2>
-<p>
-  {{vm.greeting}}
-</p>
-<ng-map center="[47.5646, -122.1700]" zoom="16">
-  <marker position="[47.5646, -122.1700]" />
-</ng-map>
+<section class="home-section-details row">
+  <h2>Showtimes</h2>
+  <div class="col s6">
+    <h3>Free Admission</h3>
+    <table class="showtimes-table">
+        <thead>
+          <tr class="showtimes-tr">
+            <th data-field="date">Date</th>
+            <th data-field="day"></th>
+            <th data-field="time">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="showtime in vm.showtimes">
+            <td>{{showtime.date}}</td>
+            <td>{{showtime.day}}</td>
+            <td>{{showtime.time}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="map-container">
+        <h3>At Newport Covenant Church</h3>
+        <ng-map center="[47.5646, -122.1700]" zoom="16">
+          <marker position="[47.5646, -122.1700]" />
+        </ng-map>
+        <p>
+          12800 SE Coal Creek Pkwy <br /> Bellevue, WA 98006
+        </p>
+      </div>
+  </div>
+  <div class="col s6">
+    <img class="attl-poster" src="app/img/poster-copy.png" alt="poster" />
+  </div>
+</section>
+
+<section class="home-section-story row">
+  <h2>THE STORY</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+</section>
+
+<section class="home-section-gallery gallery">
+  <div class="row">
+    <div class="gallery-icon-container col s12 m6">
+      <div ng-repeat="photo in vm.photos track by $index" ng-click="changeSelectedPhoto(photo.fullSize)" class="gallery-icon-box">
+        <img class="gallery-icon" ng-src="{{photo.icon}}" alt="gallery-icon"/>
+      </div>   <!-- end icon box  -->
+    </div>   <!-- end icon container  -->
+    <div class="gallery-photo-container col s12 m6">
+      <img ng-src="{{selectedPhoto}}" class="gallery-photo" alt="gallery photo"/>
+    </div> <!-- end gallery photo container -->
+
+  </div>
+</section> <!-- end gallery -->
+
+<section class="home-section-actors row">
+  <h2>Actors</h2>
+  <div class="row">
+    <div ng-repeat="actor in vm.actors track by $index" class="col s12 m4">
+      <div  class="card">
+        <div class="card-image">
+          <img src="{{actor.photo}}">
+          <span class="card-title">{{actor.name}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{actor.bio}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
