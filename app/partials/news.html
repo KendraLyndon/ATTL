@@ -1,1 +1,10 @@
-<h2>In the News!</h2>
+<h2 class="attl-title">In the News</h2>
+<section class="newsreel">
+  <div ng-repeat="event in news">
+    <h3 class="attl-title">{{event.title}}</h3>
+    <p>
+      {{event.text}}
+    </p>
+    <img ng-if="event.photo != null" ng-src="event.photo" alt="event photo" />
+  </div>
+</section>

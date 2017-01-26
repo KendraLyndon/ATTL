@@ -6,6 +6,11 @@ $poster-purple-dark: #50393F;
 $font-title: 'Libre Baskerville', serif;
 $font-main: 'Open Sans', sans-serif;
 
+@import './sass-partials/home';
+@import './sass-partials/news';
+@import './sass-partials/about';
+@import './sass-partials/contact';
+
 * {
   font-family: $font-main;
   color: #4A4B4C;
@@ -13,6 +18,8 @@ $font-main: 'Open Sans', sans-serif;
   padding: 0;
   border: 0;
 }
+
+/* elements */
 
 main {
   min-height: 90vh;
@@ -27,21 +34,13 @@ section {
   clear: both;
 }
 
-.title-banner {
-  margin-top: 0;
-  padding: 15px;
-  background-color: $poster-purple;
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
 }
 
-.attl-poster {
-  height: 80vh;
-  margin-top: 1.46rem;
-  float: right;
-}
-
-#attl-footer {
-  background-color: $poster-blue;
-}
+/* color scheme helper styles */
 
 .attl-blue {
   background-color: $poster-blue;
@@ -51,18 +50,10 @@ section {
   background-color: $poster-blue-dark;
 }
 
-.detail {
-  font-size: 20px;
-}
+/* headers */
 
-// headers
 h1, h2, h3, h4, h5 {
   text-align: center;
-}
-
-.main-title {
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .attl-title {
@@ -73,71 +64,34 @@ h1, h2, h3, h4, h5 {
   margin-left: 10px;
 }
 
-.showtimes-container {
-  margin-bottom: 30px;
+/*  font styling */
+
+.detail {
+  font-size: 20px;
 }
 
-.showtimes-table {
-  width: 85%;
-  margin: 0 auto 0 auto;
-}
-
-.showtimes-td {
-  padding: 5px 5px;
-}
-
-.map-container {
-  p {
-    margin-bottom: 10px;
-    text-align: center;
-  }
-}
-
-
-a {
-  text-decoration: none;
-  color: white;
+.lighter {
   font-weight: lighter;
 }
 
-ng-map {
-  width: 100%;
-}
-
-.home-section-story {
-  background-color: $poster-purple-dark;
-
-  p {
-    font-weight: lighter;
-    text-align: justify;
-    padding: 10px;
+.footer-links {
+  li {
+    text-align: right;
   }
 }
 
-.gallery-thumbnail-box {
-  width: 10vw;
-  height: 10vw;
-  margin: 1%;
-  display: inline-block;
+#attl-footer {
+  background-color: $poster-blue;
 }
 
-.gallery-thumbnail {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: inline-block;
-  overflow: hidden;
+@media(max-width:1050px){
+  section {
+    padding: 25px 10vw 25px 10vw;
+  }
 }
 
-.gallery-photo-container {
-  width: 44vw;
-}
-
-.gallery-photo {
-  width: 100%;
-}
-
-.home-section-actors {
-  background-color: $poster-purple-dark;
-  margin-bottom: 0;
+@media(max-width:800px){
+  section {
+    padding: 25px 5vw 25px 5vw;
+  }
 }

@@ -1,21 +1,3 @@
-* {
-  font-family: "Open Sans", sans-serif;
-  color: #4A4B4C;
-  margin: 0;
-  padding: 0;
-  border: 0; }
-
-main {
-  min-height: 90vh;
-  width: 100%;
-  clear: both; }
-
-section {
-  width: 100%;
-  margin: 0 auto 0 auto;
-  padding: 25px 12.5vw 25px 12.5vw;
-  clear: both; }
-
 .title-banner {
   margin-top: 0;
   padding: 15px;
@@ -26,30 +8,9 @@ section {
   margin-top: 1.46rem;
   float: right; }
 
-#attl-footer {
-  background-color: #4D6C94; }
-
-.attl-blue {
-  background-color: #4D6C94; }
-
-.attl-blue-dark {
-  background-color: #3D5575; }
-
-.detail {
-  font-size: 20px; }
-
-h1, h2, h3, h4, h5 {
-  text-align: center; }
-
 .main-title {
   margin-top: 5px;
   margin-bottom: 5px; }
-
-.attl-title {
-  font-family: "Libre Baskerville", serif; }
-
-.attl-logo {
-  margin-left: 10px; }
 
 .showtimes-container {
   margin-bottom: 30px; }
@@ -61,15 +22,6 @@ h1, h2, h3, h4, h5 {
 .showtimes-td {
   padding: 5px 5px; }
 
-.map-container p {
-  margin-bottom: 10px;
-  text-align: center; }
-
-a {
-  text-decoration: none;
-  color: white;
-  font-weight: lighter; }
-
 ng-map {
   width: 100%; }
 
@@ -79,6 +31,10 @@ ng-map {
     font-weight: lighter;
     text-align: justify;
     padding: 10px; }
+
+.map-container p {
+  margin-bottom: 10px;
+  text-align: center; }
 
 .gallery-thumbnail-box {
   width: 10vw;
@@ -102,5 +58,70 @@ ng-map {
 .home-section-actors {
   background-color: #50393F;
   margin-bottom: 0; }
+
+.actor-bio {
+  max-height: 300px;
+  overflow-y: scroll; }
+
+* {
+  font-family: "Open Sans", sans-serif;
+  color: #4A4B4C;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* elements */
+main {
+  min-height: 90vh;
+  width: 100%;
+  clear: both; }
+
+section {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 25px 12.5vw 25px 12.5vw;
+  clear: both; }
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: lighter; }
+
+/* color scheme helper styles */
+.attl-blue {
+  background-color: #4D6C94; }
+
+.attl-blue-dark {
+  background-color: #3D5575; }
+
+/* headers */
+h1, h2, h3, h4, h5 {
+  text-align: center; }
+
+.attl-title {
+  font-family: "Libre Baskerville", serif; }
+
+.attl-logo {
+  margin-left: 10px; }
+
+/*  font styling */
+.detail {
+  font-size: 20px; }
+
+.lighter {
+  font-weight: lighter; }
+
+.footer-links li {
+  text-align: right; }
+
+#attl-footer {
+  background-color: #4D6C94; }
+
+@media (max-width: 1050px) {
+  section {
+    padding: 25px 10vw 25px 10vw; } }
+@media (max-width: 800px) {
+  section {
+    padding: 25px 5vw 25px 5vw; } }
 
 /*# sourceMappingURL=input.css.map */
