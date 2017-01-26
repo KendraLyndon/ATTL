@@ -1,1 +1,21 @@
-<h2>About page!</h2>
+<section class="about-section-writers">
+  <h2 class="attl-title">About the Writers</h2>
+  <div class="row">
+    <div class="col s0 m1 l1"> <!-- spacer column -->
+    </div>
+    <div ng-repeat="writer in vm.writers" class="col s12 m5 l5">
+      <div class="card">
+        <div class="card-image">
+          <img ng-src="{{writer.photo}}">
+        </div>
+        <div class="card-content">
+          <span class="card-title attl-title">{{writer.name}}</span>
+          <span class="card-title">{{writer.title}}</span>
+          <p>{{writer.bio}}</p>
+        </div> <!-- end card-content -->
+      </div> <!-- end card -->
+    </div> <!-- end column -->
+    <div class="col s0 m1 l1"> <!-- spacer column -->
+    </div>
+  </div> <!-- end row -->
+</section>

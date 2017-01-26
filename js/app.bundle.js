@@ -5,6 +5,7 @@ webpackJsonp([0],[
 	var attlApp = angular.module('attlApp', [__webpack_require__(1), __webpack_require__(3)]);
 
 	var HomeController = __webpack_require__(6);
+	var AboutController = __webpack_require__(9);
 
 	attlApp.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
@@ -13,7 +14,9 @@ webpackJsonp([0],[
 	    controller: 'HomeController',
 	    resolve: HomeController.resolve
 	  }).when('/about', {
-	    templateUrl: 'app/partials/about.html'
+	    templateUrl: 'app/partials/about.html',
+	    controller: 'AboutController',
+	    resolve: AboutController.resolve
 	  }).when('/news', {
 	    templateUrl: 'app/partials/news.html'
 	  }).when('/contact', {
@@ -4654,6 +4657,9 @@ webpackJsonp([0],[
 	    }, {
 	      thumbnail: 'app/img/puppy2.jpg',
 	      fullSize: 'app/img/puppy2.jpg'
+	    }, {
+	      thumbnail: 'app/img/puppy4.jpg',
+	      fullSize: 'app/img/puppy4.jpg'
 	    }]
 	  };
 	});
@@ -4690,6 +4696,42 @@ webpackJsonp([0],[
 	      name: "Vanessa O'Francia",
 	      photo: 'app/img/puppy2.jpg',
 	      bio: 'Vanessa Ignacio O’Francia (Milcah) is a Seattle native and a woman after God’s own heart. She is absolutely honored to make her debut here with Newport Covenant Church. You may have seen Vanessa in some of her favorite theatre productions such as The Dream Girls (Lorrell Robinson), The Coming of the Messiah (Mother Mary), and The Snow Queen (Gerda) . As she pursues the arts Vanessa also balances her graduate studies at the UW School of Social Work and service as an Art/Mental Health Therapist. She would like to thank the staff for this wonderful opportunity, the love of her life for all of his support, and God for pushing her to be a “lion-hearted-lamb” Hebrews 10:35-36.'
+	    }]
+	  };
+	});
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var attlApp = angular.module('attlApp');
+	var AboutService = __webpack_require__(10);
+
+	attlApp.controller("AboutController", ["$scope", "AboutService", function ($scope, AboutService) {
+	  $scope.vm = {};
+	  $scope.vm.writers = AboutService.writers;
+	}]);
+
+	module.exports = attlApp;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	var attlApp = angular.module('attlApp');
+
+	attlApp.factory('AboutService', function () {
+	  return {
+	    writers: [{
+	      name: 'Kathee Lyndon',
+	      title: 'Author - book',
+	      photo: 'app/img/kathee_lyndon.jpg',
+	      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+	    }, {
+	      name: 'Brenda Giordano',
+	      title: 'Composer - music and lyrics',
+	      photo: 'app/img/brenda_giordano.jpg',
+	      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 	    }]
 	  };
 	});

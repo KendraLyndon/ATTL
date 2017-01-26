@@ -2,6 +2,7 @@ var attlApp = angular.module('attlApp', [require('angular-route'),
                                         require('ngmap')]);
 
 var HomeController = require('./controllers/HomeController');
+var AboutController = require('./controllers/AboutController');
 
 attlApp.config(function($routeProvider, $locationProvider) {
 
@@ -12,7 +13,9 @@ attlApp.config(function($routeProvider, $locationProvider) {
       resolve: HomeController.resolve
     })
     .when('/about', {
-      templateUrl: 'app/partials/about.html'
+      templateUrl: 'app/partials/about.html',
+      controller: 'AboutController',
+      resolve: AboutController.resolve
     })
     .when('/news', {
       templateUrl: 'app/partials/news.html'

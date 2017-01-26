@@ -67,6 +67,10 @@ attlApp.factory('HomeService', function(){
         thumbnail: 'app/img/puppy2.jpg',
         fullSize: 'app/img/puppy2.jpg'
       },
+      {
+        thumbnail: 'app/img/puppy4.jpg',
+        fullSize: 'app/img/puppy4.jpg'
+      }
     ]
   }
 })

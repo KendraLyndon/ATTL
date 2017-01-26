@@ -19,7 +19,7 @@ $font-main: 'Open Sans', sans-serif;
   border: 0;
 }
 
-/* elements */
+/* elements uniform styling */
 
 main {
   min-height: 90vh;
@@ -40,6 +40,12 @@ a {
   font-weight: lighter;
 }
 
+/* overriding materialize */
+
+.container {
+  width: 75%;
+}
+
 /* color scheme helper styles */
 
 .attl-blue {
@@ -48,6 +54,16 @@ a {
 
 .attl-blue-dark {
   background-color: $poster-blue-dark;
+}
+
+/*  font styling */
+
+.detail {
+  font-size: 20px;
+}
+
+.lighter {
+  font-weight: lighter;
 }
 
 /* headers */
@@ -64,15 +80,7 @@ h1, h2, h3, h4, h5 {
   margin-left: 10px;
 }
 
-/*  font styling */
-
-.detail {
-  font-size: 20px;
-}
-
-.lighter {
-  font-weight: lighter;
-}
+/*  footer styling  */
 
 .footer-links {
   li {
@@ -83,6 +91,8 @@ h1, h2, h3, h4, h5 {
 #attl-footer {
   background-color: $poster-blue;
 }
+
+/*  media queries  */
 
 @media(max-width:1050px){
   section {
