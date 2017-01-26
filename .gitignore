@@ -1,2 +1,6 @@
 node_modules
 public
+.firebaserc
+firebase.json
+superstatic.json
+.DS_Store
