@@ -1,5 +1,6 @@
 {
   "name": "ATTL",
+  "start": "app/app.js",
   "version": "1.0.0",
   "description": "",
   "main": "app.bundle.js",
