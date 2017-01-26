@@ -6,6 +6,7 @@ webpackJsonp([0],[
 
 	var HomeController = __webpack_require__(6);
 	var AboutController = __webpack_require__(9);
+	var NewsController = __webpack_require__(11);
 
 	attlApp.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
@@ -18,7 +19,9 @@ webpackJsonp([0],[
 	    controller: 'AboutController',
 	    resolve: AboutController.resolve
 	  }).when('/news', {
-	    templateUrl: 'app/partials/news.html'
+	    templateUrl: 'app/partials/news.html',
+	    controller: 'NewsController',
+	    resolve: NewsController.resolve
 	  }).when('/contact', {
 	    templateUrl: 'app/partials/contact.html'
 	  });
@@ -4732,6 +4735,42 @@ webpackJsonp([0],[
 	      title: 'Composer - music and lyrics',
 	      photo: 'app/img/brenda_giordano.jpg',
 	      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+	    }]
+	  };
+	});
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var attlApp = angular.module('attlApp');
+	var NewsService = __webpack_require__(12);
+
+	module.exports = attlApp.controller('NewsController', ["$scope", "NewsService", function ($scope, NewsService) {
+	  $scope.vm = {};
+	  $scope.vm.news = NewsService.all;
+	}]);
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	var attlApp = angular.module('attlApp');
+
+	attlApp.factory('NewsService', function () {
+	  return {
+	    all: [{
+	      title: 'Example Title',
+	      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+	      photo: null
+	    }, {
+	      title: 'Example Title',
+	      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+	      photo: null
+	    }, {
+	      title: 'Example Title',
+	      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+	      photo: null
 	    }]
 	  };
 	});

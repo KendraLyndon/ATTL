@@ -71,6 +71,11 @@ ng-map {
   max-height: 300px;
   overflow-y: scroll; }
 
+.large-quote {
+  font-size: 30px;
+  margin: 5vh 0 5vh 0;
+  text-align: center; }
+
 * {
   font-family: "Open Sans", sans-serif;
   color: #4A4B4C;
@@ -116,6 +121,9 @@ a {
 /* headers */
 h1, h2, h3, h4, h5 {
   text-align: center; }
+
+h2.attl-title {
+  margin-top: 7vh; }
 
 .attl-title {
   font-family: "Libre Baskerville", serif; }
