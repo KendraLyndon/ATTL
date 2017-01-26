@@ -73,7 +73,7 @@ ng-map {
 
 .large-quote {
   font-size: 30px;
-  margin: 5vh 0 5vh 0;
+  margin: 3vh 0 5vh 0;
   text-align: center; }
 
 * {
@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5 {
   text-align: center; }
 
 h2.attl-title {
-  margin-top: 7vh; }
+  margin: 5vh auto 5vh auto; }
 
 .attl-title {
   font-family: "Libre Baskerville", serif; }
