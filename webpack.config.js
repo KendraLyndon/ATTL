@@ -7,7 +7,7 @@ module.exports = {
     vendor: ['angular']
   },
   output: {
-    path: __dirname + '/public',
+    path: __dirname + '/js',
     filename: 'app.bundle.js'
   },
   module: {

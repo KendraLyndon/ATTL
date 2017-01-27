@@ -48,23 +48,8 @@
   </div> <!-- end column -->
 </section>
 
-<!-- the story -->
-<section class="home-section-story row">
-  <h2 class="attl-title grey-text text-lighten-4">The Story</h2>
-  <p class="grey-text text-lighten-4">
-    Bethlehem is abuzz at the return of Naomi to her hometown - ten years after her husband moved her and their two sons to neighboring (and despised) Moab. She returns penniless, childless, and a widow. She also brings her Moabite daughter-in-law, Ruth, who wants desperately to belong to this community and to help her beloved mother-in-law.
-  </p>
-  <p class="grey-text text-lighten-4">
-    Naomi is viewed as having 'gone over to the enemy' for the move to Moab.  Ruth is treated with suspicion and harsh prejudice. Wicked and miserly Uncle Nemuel wants Naomi's land for his own and will stop at nothing to get it. Naomi is determined not only to keep the land but also to build a heritage for herself and her devoted but headstrong daughter-in-law.
-  </p>
-  <p class="grey-text text-lighten-4">
-    But then a most unlikely suitor, Boaz, falls in love with Ruth...and what could be the women's salvation could also bring about their undoing.
-  </p>
-</section>
-
 <!-- photo gallery -->
 <section class="home-section-gallery gallery">
-  <h2 class="attl-title">Photos</h2>
   <div class="row">
     <div class="gallery-icon-container col s12 m6 l6">
       <div ng-repeat="photo in vm.photos track by $index" ng-click="changeSelectedPhoto(photo.fullSize)" class="gallery-thumbnail-box">
@@ -77,20 +62,16 @@
   </div> <!-- end row -->
 </section> <!-- end gallery -->
 
-<!-- actor bios -->
-<section class="home-section-actors row">
-  <h2 class="attl-title grey-text text-lighten-4">Actors</h2>
-  <div class="row">
-    <div ng-repeat="actor in vm.actors track by $index" class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{actor.photo}}">
-          <span class="card-title">{{actor.name}}</span>
-        </div>
-        <div class="card-content actor-bio">
-          <p>{{actor.bio}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- the story -->
+<section class="home-section-story row">
+  <h2 class="attl-title">The Story</h2>
+  <p>
+    Bethlehem is abuzz at the return of Naomi to her hometown - ten years after her husband moved her and their two sons to neighboring (and despised) Moab. She returns penniless, childless, and a widow. She also brings her Moabite daughter-in-law, Ruth, who wants desperately to belong to this community and to help her beloved mother-in-law.
+  </p>
+  <p>
+    Naomi is viewed as having 'gone over to the enemy' for the move to Moab.  Ruth is treated with suspicion and harsh prejudice. Wicked and miserly Uncle Nemuel wants Naomi's land for his own and will stop at nothing to get it. Naomi is determined not only to keep the land but also to build a heritage for herself and her devoted but headstrong daughter-in-law.
+  </p>
+  <p>
+    But then a most unlikely suitor, Boaz, falls in love with Ruth...and what could be the women's salvation could also bring about their undoing.
+  </p>
 </section>

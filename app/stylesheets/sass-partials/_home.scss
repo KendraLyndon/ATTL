@@ -41,19 +41,11 @@ ng-map {
   width: 100%;
 }
 
-/*  story section styling */
-
-.home-section-story {
-  background-color: $poster-purple-dark;
-
-  p {
-    font-weight: lighter;
-    text-align: center;
-    padding: 10px;
-  }
-}
-
 /*  gallery section styling  */
+
+.home-section-gallery {
+  background-color: $poster-purple-dark;
+}
 
 .gallery-thumbnail-box {
   width: 10vw;
@@ -81,15 +73,13 @@ ng-map {
   float: right;
 }
 
-/*  actor section styling  */
+/*  story section styling */
 
-.home-section-actors {
-  clear: both;
-  background-color: $poster-purple-dark;
-  margin-bottom: 0;
-}
+.home-section-story {
 
-.actor-bio {
-  max-height: 300px;
-  overflow-y: scroll;
+  p {
+    font-weight: lighter;
+    text-align: center;
+    padding: 10px;
+  }
 }

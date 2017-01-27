@@ -1,3 +1,4 @@
+<!-- Writer Bios -->
 <section class="about-section-writers">
   <h2 class="attl-title">About the Writers</h2>
   <div class="row">
@@ -9,14 +10,32 @@
         <div class="card-image">
           <img ng-src="{{writer.photo}}">
         </div>
-        <div class="card-content">
+        <div class="card-content writer-bio">
           <span class="card-title attl-title">{{writer.name}}</span>
           <span class="card-title">{{writer.title}}</span>
-          <p>{{writer.bio}}</p>
+          <p class="writer-bio-text" ng-repeat="paragraph in writer.bio">{{paragraph}}</p>
         </div> <!-- end card-content -->
       </div> <!-- end card -->
     </div> <!-- end column -->
     <div class="col s0 m1 l1"> <!-- spacer column -->
     </div>
+  </div> <!-- end row -->
+</section>
+
+<!-- Actor Bios -->
+<section class="about-section-actors row">
+  <h2 class="attl-title grey-text text-lighten-4">About the Actors</h2>
+  <div class="row">
+    <div ng-repeat="actor in vm.actors track by $index" class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img ng-src="{{actor.photo}}">
+          <span class="card-title">{{actor.name}}</span>
+        </div>
+        <div class="card-content actor-bio">
+          <p>{{actor.bio}}</p>
+        </div> <!-- end card content -->
+      </div> <!-- end card -->
+    </div> <!-- end column -->
   </div> <!-- end row -->
 </section>

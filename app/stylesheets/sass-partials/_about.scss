@@ -1,0 +1,23 @@
+/*  writer section styling  */
+
+.writer-bio {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.writer-bio-text {
+  margin-bottom: 10px !important;
+}
+
+/*  actor section styling  */
+
+.about-section-actors {
+  clear: both;
+  background-color: $poster-purple-dark;
+  margin-bottom: 0;
+}
+
+.actor-bio {
+  max-height: 300px;
+  overflow-y: scroll;
+}
