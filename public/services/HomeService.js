@@ -1,5 +1,3 @@
-var attlApp = angular.module('attlApp');
-
 attlApp.factory('HomeService', function(){
   return {
     showtimes : [
@@ -36,40 +34,40 @@ attlApp.factory('HomeService', function(){
     ],
     photos : [
       {
-        thumbnail: 'app/img/puppy1.jpg',
-        fullSize: 'app/img/puppy1.jpg'
+        thumbnail: '../img/puppy1.jpg',
+        fullSize: '../img/puppy1.jpg'
       },
       {
-        thumbnail: 'app/img/puppy2.jpg',
-        fullSize: 'app/img/puppy2.jpg'
+        thumbnail: '../img/puppy2.jpg',
+        fullSize: '../img/puppy2.jpg'
       },
       {
-        thumbnail: 'app/img/puppy3.jpg',
-        fullSize: 'app/img/puppy3.jpg'
+        thumbnail: '../img/puppy3.jpg',
+        fullSize: '../img/puppy3.jpg'
       },
       {
-        thumbnail: 'app/img/puppy4.jpg',
-        fullSize: 'app/img/puppy4.jpg'
+        thumbnail: '../img/puppy4.jpg',
+        fullSize: '../img/puppy4.jpg'
       },
       {
-        thumbnail: 'app/img/placeholder.jpg',
-        fullSize: 'app/img/placeholder.jpg'
+        thumbnail: '../img/placeholder.jpg',
+        fullSize: '../img/placeholder.jpg'
       },
       {
-        thumbnail: 'app/img/puppy3.jpg',
-        fullSize: 'app/img/puppy3.jpg'
+        thumbnail: '../img/puppy3.jpg',
+        fullSize: '../img/puppy3.jpg'
       },
       {
-        thumbnail: 'app/img/puppy1.jpg',
-        fullSize: 'app/img/puppy1.jpg'
+        thumbnail: '../img/puppy1.jpg',
+        fullSize: '../img/puppy1.jpg'
       },
       {
-        thumbnail: 'app/img/puppy2.jpg',
-        fullSize: 'app/img/puppy2.jpg'
+        thumbnail: '../img/puppy2.jpg',
+        fullSize: '../img/puppy2.jpg'
       },
       {
-        thumbnail: 'app/img/puppy4.jpg',
-        fullSize: 'app/img/puppy4.jpg'
+        thumbnail: '../img/puppy4.jpg',
+        fullSize: '../img/puppy4.jpg'
       }
     ]
   }

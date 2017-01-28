@@ -1,5 +1,3 @@
-var attlApp = angular.module('attlApp');
-
 attlApp.factory('NewsService', function(){
   return {
     all: [
